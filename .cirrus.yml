@@ -5,9 +5,8 @@ task:
   setup_script: |
     brew install rustup
     rustup-init --profile minimal --default-toolchain nightly -y
-  binaries_artifacts:
-    path: "target/release/shiitssync"
-
   script: |
     source "$HOME/.cargo/env"
     cargo build --release
+  binaries_artifacts:
+    path: "target/release/shiitssync"
