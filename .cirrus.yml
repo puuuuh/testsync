@@ -4,4 +4,5 @@ task:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
   setup_script: |
     brew install rustup
-  script: echo "Hello World from macOS!"
+    rustup-init --profile minimal --default-toolchain nightly
+  script: cargo build --release
