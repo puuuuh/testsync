@@ -5,6 +5,7 @@ task:
   setup_script: |
     brew install rustup
     rustup-init --profile minimal --default-toolchain nightly -y
-    source "$HOME/.cargo/env"
 
-  script: cargo build --release
+  script: |
+    source "$HOME/.cargo/env"
+    cargo build --release
