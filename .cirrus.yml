@@ -7,6 +7,7 @@ task:
     rustup-init --profile minimal --default-toolchain nightly -y
   script: |
     source "$HOME/.cargo/env"
-    cargo build --release
+    cargo build --releases
+    strip target/release/shiitssync
   binaries_artifacts:
     path: "target/release/shiitssync"
