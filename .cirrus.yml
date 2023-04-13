@@ -1,0 +1,7 @@
+task:
+  name: MacOS
+  macos_instance:
+    image: ghcr.io/cirruslabs/macos-ventura-base:latest
+  setup_script: |
+    brew install rustup
+  script: echo "Hello World from macOS!"
